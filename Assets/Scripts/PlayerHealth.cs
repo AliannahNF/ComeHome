@@ -28,7 +28,7 @@ public class PlayerHealth : MonoBehaviour
     void Die()
     {
         Debug.Log("Player died!");
-        // We'll add game over screen here later
-        gameObject.SetActive(false);
+        SceneLoader.LoadGameOver();
+        
     }
 }
