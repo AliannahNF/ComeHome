@@ -26,6 +26,9 @@ public class LoreItem : MonoBehaviour
             playerInRange = true;
             textPanel.SetActive(true);
             textDisplay.text = loreText;
+
+            if (JournalUI.Instance != null)
+                JournalUI.Instance.AddNote(loreText);
         }
     }
 

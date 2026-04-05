@@ -9,6 +9,7 @@ public class DungeonGenerator : MonoBehaviour
     public int roomHeight = 8;
     public Tilemap tilemap;
     public TileBase wallTile;
+    public GameObject[] loreObjects;
 
     private List<Vector2Int> rooms = new List<Vector2Int>();
 
@@ -69,6 +70,17 @@ public class DungeonGenerator : MonoBehaviour
         GameObject escape = GameObject.Find("EscapeTrigger");
         if (escape != null)
             escape.transform.position = new Vector3(ex, ey, 0);
+
+        // Place lore objects in random rooms
+        for (int i = 0; i < loreObjects.Length; i++)
+        {
+            if (loreObjects[i] == null) continue;
+
+            Vector2Int loreRoom = rooms[Random.Range(0, rooms.Count)];
+            int lx = loreRoom.x * (roomWidth + 1) + roomWidth / 2 - 2;
+            int ly = loreRoom.y * (roomHeight + 1) + roomHeight / 2 - 2;
+            loreObjects[i].transform.position = new Vector3(lx, ly, 0);
+        }
     }
 
     void DrawRoom(Vector2Int roomPos)
