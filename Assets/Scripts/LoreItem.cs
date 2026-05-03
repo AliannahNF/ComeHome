@@ -10,6 +10,7 @@ public class LoreItem : MonoBehaviour
     public TextMeshProUGUI textDisplay;
     
     private bool playerInRange = false;
+    private bool hasBeenRead = false;
 
     void Update()
     {
@@ -29,6 +30,12 @@ public class LoreItem : MonoBehaviour
 
             if (JournalUI.Instance != null)
                 JournalUI.Instance.AddNote(loreText);
+
+            if (!hasBeenRead)
+            {
+                hasBeenRead = true;
+                GameManager.Instance.totalNotesCollected++;
+            }
         }
     }
 

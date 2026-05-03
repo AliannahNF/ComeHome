@@ -22,7 +22,13 @@ public class JournalUI : MonoBehaviour
         if (!notes.Contains(note))
         {
             notes.Add(note);
-            journalText.text = string.Join("\n\n---\n\n", notes);
+            journalText.text = string.Join("\n\n———\n\n", notes);
         }
+    }
+
+    public void ShowText(string message)
+    {
+        journalPanel.SetActive(true);
+        journalText.text = message;
     }
 }
