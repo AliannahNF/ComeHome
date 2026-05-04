@@ -11,23 +11,28 @@ The deeper you go, the more you realize. The daughter was never dead and she's b
 - **WASD** — move
 - **Walk into lore objects** — read notes
 - **J** — open journal to review collected notes
-- **Find the daughter** (yellow circle) before reaching the exit
-- **Reach the green exit marker** to escape
+- **Find the key** — it spawns in a random room each playthrough
+- **Use the key** to unlock the daughter's room
+- **Find the daughter** (yellow circle)
+- **Collect all 5 notes**
+- **Reach the exit** to escape
 - If the Mother catches you and drains your HP — game over
 
 ## Two Endings
-- **Good ending** — escape with the daughter
+- **Good ending** — escape with the daughter and all notes collected
 - **Bad ending** — mother kills you
 
 ## Features
-- Procedurally generated connected dungeon rooms
+- **Procedural key spawning** — the key appears in a random room each playthrough
 - Mother NPC AI that chases and damages the player
-- Lore note collection system with journal
+- Locked door mechanic requiring a key to access the daughter's room
+- Lore note collection system with journal (must collect all 5 to escape)
 - Health bar UI
 - Two scene outcomes (WinScene / GameOver)
+- Hand-painted 6-room house with furniture
 
 ## Art Assets
-Note: This build uses placeholder shapes (circles and squares) in place of final sprites. I plan on continuing this project will be continued and expanding for the revision project, at which point original hand-drawn art assets created in Procreate will be integrated. This includes custom sprites for the player, mother NPC, daughter, and environment tiles.
+All sprites and tile art are original, hand-painted assets created in Aseprite/Procreate by Aliannah NF.
 
 ## GitHub
 https://github.com/AliannahNF/ComeHome
